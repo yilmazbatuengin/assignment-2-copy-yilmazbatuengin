@@ -1,17 +1,26 @@
-#include <cs50.h>
 #include <stdio.h>
 
-int string_length(string s);
+// fonksiyon prototipi
+int string_length(char str[]);
 
 int main(void)
 {
-    string name = get_string("Name: ");
-    int len = string_length(name);
-    printf("%i\n", len);
+    char str[100];
+
+    printf("Input: ");
+    scanf("%s", str);
+
+    printf("Length: %d\n", string_length(str));
 }
 
-int string_length(string s)
+int string_length(char str[])
 {
-    // TODO: count chars until '\0'
-    return 0;
+    int i = 0;
+
+    while (str[i] != '\0')
+    {
+        i++;
+    }
+
+    return i;
 }
